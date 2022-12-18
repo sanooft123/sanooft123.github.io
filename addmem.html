@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="familyregstyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>addmem.html</title>
+</head>
+<body class="body">
+    <div class="container container-fluid">
+        <header class="header">
+            ADD MEMBERS
+        </header>
+
+        <p style="color: red;">! if you have nothing to fill , fill "NIL" or "00"</p>
+
+        <form id="submit-form" class="submit-form form form-control contact-form"  action="">
+    
+    
+            <div class="input-fields col-md-4">
+                <label for="">Full Name</label>
+                <input class="fullname" name="fname" type="text" placeholder="Enter your name" required>
+            </div>
+
+            <!-- <div class="row justify-content-between" id="adds">
+                <div class="name col-md-4">
+                    <h5>sanoof</h5>
+                </div>
+                <div class="age col-md-4">
+                    <h6>21</h6>
+                </div>
+                <div class="success col-md-4">
+                    <h6>successfully completed</h6>
+                </div>
+                <div class="member col-md-4">
+                    <h6>member </h6>
+                </div>
+                <div class="addmember col-md-4">
+                    <button class="next-button ">add</button>
+                </div>
+            </div> -->
+
+            <div id="addforms">
+
+            </div>
+        
+            <input type="submit" class="next-button" value="Submit">
+    
+        </form>
+
+        
+        
+        
+    </div>
+
+    
+    
+    <script src="firebase/firebase.js"></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="familyreg.js"></script>
+    <script src="firebase.js"></script>
+
+
+
+
+
+    <script>
+
+    
+
+    $(document).ready(function(){
+        x=localStorage.getItem("num");
+        for (let i = 0; i < x; i++) {
+
+    
+
+        $("#addforms").append(`
+    
+    
+        <div class="personal-detials">
+            
+            <h4 class="title1">Member  </h4>
+    
+            <div class="fields">
+                <div class="input-fields col-md-4">
+                            <label for="">Full Name</label>
+                            <input class="fullname" name="fname" type="text" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Alias</label>
+                            <input class="alias" name="alias" type="text" placeholder="Enter your alias name" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Phone Number</label>
+                            <input class="phonenumber" name="pnumber" type="number" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Date of Birth</label>
+                            <input class="dob" name="dob" type="date" placeholder="Enter your dob" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Age</label>
+                            <input class="age" name="age" type="number" placeholder="Enter your age" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Email</label>
+                            <input class="emailaddress" name="email" type="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Father's Name</label>
+                            <input class="fathersname" name="fathername" type="text" placeholder="Enter your father name" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Father's Father Name</label>
+                            <input class="fathersfathername" name="ffathername" type="text" placeholder="Enter your fathers father name" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Father's mother Name</label>
+                            <input class="fathersmothername" name="fmothername" type="text" placeholder="Enter your mothes mother name" required> 
+                        </div>
+
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Mother's Name</label>
+                            <input class="mothersname" name="mothername" type="text" placeholder="Enter your father name" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Mother's Father Name</label>
+                            <input class="mothersfathername" name="mfathername" type="text" placeholder="Enter your fathers father name" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Mother's mother Name</label>
+                            <input class="mothersmothername" name="mmothername" type="text" placeholder="Enter your mothes mother name" required>
+                        </div>
+
+                        <div class="input-fields col-md-4">
+                            <label for="">Blood group</label>
+                            <select name="bloodgroup" id="" required>
+                                <option value="">choose</option>
+                                <option value="A+ve">A+ve</option>
+                                <option value="B+ve">B+ve</option>
+                                <option value="AB+ve">AB+ve</option>
+                                <option value="O+ve">O+ve</option>
+                                <option value="A-ve">A-ve</option>
+                                <option value="B-ve">B-ve</option>
+                                <option value="AB-ve">AB-ve</option>
+                                <option value="O-ve">O-ve</option>
+                            </select>
+                        </div>
+
+                        <div class="input-fields col-md-6">
+                            <label for="">Occupation</label>
+                            <input class="occupation" name="occupation" type="text" placeholder="Enter your occupation" required>
+                        </div>
+                        
+                        <div class="input-fields col-md-6">
+                            <label for="">Address</label>
+                            <input class="address" name="address" type="text" placeholder="Enter your full address" required>
+                        </div>
+
+                        <div class="input-fields col-md-6">
+                            <label for="">What's app number</label>
+                            <input class="whatsappnum" name="whatsappnumber" type="number" placeholder="Enter your what's app number" required>
+                        </div>
+
+                        <br>
+                        <br>
+                        <hr>
+    
+    
+    
+    
+            </div>
+        </div>
+        
+        
+
+     
+    `)
+    
+    
+    
+      };
+      $()
+    
+})
+
+        $("#submit-form").submit((e)=>{
+            e.preventDefault(),
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwG1sMxlvZU2b8R7u9tq2MzkMV7Q6oLJrrvYIaTEicEnFj3f4RkbT1iYMrPqTFRLLT37w/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("add a member successfully")
+                    // window.location.reload()
+                    window.location.href="home.html"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+
+
+
+
+
+
+
+</body>
+    
+</html>
