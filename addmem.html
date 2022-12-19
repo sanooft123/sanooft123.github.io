@@ -83,7 +83,7 @@
 
     $(document).ready(function(){
         x=localStorage.getItem("num");
-        for (let i = 0; i < x; i++) {
+        for (let i = 1; i < x; i++) {
 
     
 
@@ -217,7 +217,7 @@
                 success:function (response){
                     alert("add a member successfully")
                     // window.location.reload()
-                    window.location.href="home.html"
+                    window.location.href="index.html"
                 },
                 error:function (err){
                     alert("Something Error")
