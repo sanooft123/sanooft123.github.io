@@ -16,33 +16,16 @@
             ADD MEMBERS
         </header>
 
-        <p style="color: red;">! if you have nothing to fill , fill "NIL" or "00"</p>
+        <!-- <p style="color: red;">! if you have nothing to fill , fill "NIL" or "00"</p> -->
 
         <form id="submit-form" class="submit-form form form-control contact-form"  action="">
     
     
             <div class="input-fields col-md-4">
-                <label for="">Full Name</label>
-                <input class="fullname" name="fname" type="text" placeholder="Enter your name" required>
+                <label for="">Your Full Name</label>
+                <input class="fullname" name="fname" type="text" placeholder="Enter your full name" required>
             </div>
 
-            <!-- <div class="row justify-content-between" id="adds">
-                <div class="name col-md-4">
-                    <h5>sanoof</h5>
-                </div>
-                <div class="age col-md-4">
-                    <h6>21</h6>
-                </div>
-                <div class="success col-md-4">
-                    <h6>successfully completed</h6>
-                </div>
-                <div class="member col-md-4">
-                    <h6>member </h6>
-                </div>
-                <div class="addmember col-md-4">
-                    <button class="next-button ">add</button>
-                </div>
-            </div> -->
 
             <div id="addforms">
 
@@ -76,6 +59,7 @@
 
 
 
+ 
 
     <script>
 
@@ -85,80 +69,79 @@
         x=localStorage.getItem("num");
         for (let i = 1; i < x; i++) {
 
-    
 
         $("#addforms").append(`
     
     
         <div class="personal-detials">
-            
-            <h4 class="title1">Member  </h4>
+            <br><br>
+            <h4 class="title1"> member </h4>
     
             <div class="fields">
                 <div class="input-fields col-md-4">
                             <label for="">Full Name</label>
-                            <input class="fullname" name="fname" type="text" placeholder="Enter your name" required>
+                            <input class="fullname" name="fname" type="text" placeholder="Enter member name" required>
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Alias</label>
-                            <input class="alias" name="alias" type="text" placeholder="Enter your alias name" >
+                            <input class="alias" name="alias" type="text" placeholder="Enter member alias name" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Phone Number</label>
-                            <input class="phonenumber" name="pnumber" type="number" placeholder="Enter your phone number" >
+                            <input class="phonenumber" name="pnumber" type="number" placeholder="Enter your member number" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Date of Birth</label>
-                            <input class="dob" name="dob" type="date" placeholder="Enter your dob" >
+                            <input class="dob" name="dob" type="date" placeholder="Enter member dob" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Age</label>
-                            <input class="age" name="age" type="number" placeholder="Enter your age" >
+                            <input class="age" name="age" type="number" placeholder="Enter member age" required>
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Email</label>
-                            <input class="emailaddress" name="email" type="email" placeholder="Enter your email" >
+                            <input class="emailaddress" name="email" type="email" placeholder="Enter member email" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Father's Name</label>
-                            <input class="fathersname" name="fathername" type="text" placeholder="Enter your father name" >
+                            <input class="fathersname" name="fathername" type="text" placeholder="Enter member father name" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Father's Father Name</label>
-                            <input class="fathersfathername" name="ffathername" type="text" placeholder="Enter your fathers father name" >
+                            <input class="fathersfathername" name="ffathername" type="text" placeholder="Enter member fathers father name" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Father's mother Name</label>
-                            <input class="fathersmothername" name="fmothername" type="text" placeholder="Enter your mothes mother name" > 
+                            <input class="fathersmothername" name="fmothername" type="text" placeholder="Enter member mothes mother name" > 
                         </div>
 
 
                         <div class="input-fields col-md-4">
                             <label for="">Mother's Name</label>
-                            <input class="mothersname" name="mothername" type="text" placeholder="Enter your father name" >
+                            <input class="mothersname" name="mothername" type="text" placeholder="Enter member father name" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Mother's Father Name</label>
-                            <input class="mothersfathername" name="mfathername" type="text" placeholder="Enter your fathers father name" >
+                            <input class="mothersfathername" name="mfathername" type="text" placeholder="Enter member fathers father name" >
                         </div>
 
                         <div class="input-fields col-md-4">
                             <label for="">Mother's mother Name</label>
-                            <input class="mothersmothername" name="mmothername" type="text" placeholder="Enter your mothes mother name" >
+                            <input class="mothersmothername" name="mmothername" type="text" placeholder="Enter member mothes mother name" >
                         </div>
 
-                        <div class="input-fields col-md-4">
+                        <div class="input-fields col-md-6">
                             <label for="">Blood group</label>
-                            <select name="bloodgroup" id="" >
+                            <select name="bloodgroup" class="input-fields" id="" >
                                 <option value="">choose</option>
                                 <option value="A+ve">A+ve</option>
                                 <option value="B+ve">B+ve</option>
@@ -173,17 +156,13 @@
 
                         <div class="input-fields col-md-6">
                             <label for="">Occupation</label>
-                            <input class="occupation" name="occupation" type="text" placeholder="Enter your occupation" >
+                            <input class="occupation" name="occupation" type="text" placeholder="Enter member occupation" >
                         </div>
                         
-                        <div class="input-fields col-md-6">
-                            <label for="">Address</label>
-                            <input class="address" name="address" type="text" placeholder="Enter your full address" >
-                        </div>
 
                         <div class="input-fields col-md-6">
                             <label for="">What's app number</label>
-                            <input class="whatsappnum" name="whatsappnumber" type="number" placeholder="Enter your what's app number" >
+                            <input class="whatsappnum" name="whatsappnumber" type="number" placeholder="Enter member what's app number" >
                         </div>
 
                         <br>
