@@ -26,7 +26,12 @@
                 <input class="fullname" name="name" type="text" placeholder="Enter your full name" required>
             </div>
 
+            <br>
+            <hr>
+            <h6 class="title1"> Enter the detials of members coming for the event </h6>
 
+            <hr>
+            <br>
             <div id="addforms">
 
             </div>
@@ -67,15 +72,15 @@
 
     $(document).ready(function(){
         x=localStorage.getItem("num");
-        for (let i = 1; i < x; i++) {
+        for (let i = 1; i < x+1; i++) {
 
 
         $("#addforms").append(`
     
     
         <div class="personal-detials">
-            <br><hr>
-            <h4 class="title1"> member </h4>
+            <br>
+            
     
             <div class="fields">
                 <div class="input-fields col-md-4">
@@ -100,14 +105,15 @@
                             <input class="mothersname" name="mmothername" type="text" placeholder="Enter member father name" >
                         </div>
 
-                        <br>
-                        <br>
-                        <hr>
+                    
     
     
     
     
             </div>
+
+            <hr>
+            
         </div>
         
         

@@ -132,7 +132,7 @@
 
                         <div class="input-fields col-md-6">
                             <label for="">Number of members coming for the event</label>
-                            <input id="memnumevent" class="membersnumberevent" name="membersnumberevent" type="number" placeholder="Enter number of members" required>
+                            <input id="memnumevent" class="membersnumberevent" name="eventmembersnumber" type="number" placeholder="Enter number of members" required>
                         </div>
 
 
@@ -161,7 +161,7 @@
     <script>
         
         $("#submit-form").submit((e)=>{
-            var x= $("#memnum").val()
+            var x= $("#memnumevent").val()
             localStorage.setItem("num", x);
             e.preventDefault()
             $.ajax({
