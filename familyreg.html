@@ -31,7 +31,7 @@
                     <div class="fields  ">
                         <div class="input-fields col-md-4">
                             <label for="">Full Name</label>
-                            <input class="fullname" name="fullname" type="text" placeholder="Enter your name" required>
+                            <input id="headfullname" class="fullname" name="fullname" type="text" placeholder="Enter your name" required>
                         </div>
 
                         <div class="input-fields col-md-4">
@@ -44,7 +44,7 @@
                             <input class="phonenumber" name="phonenumber" type="tel" placeholder="Enter your phone number" required>
                         </div>
 
-                        <div class="input-fields col-md-4 sm-10"> 
+                        <div class="input-fields col-md-4"> 
                             <label for="">Date of Birth</label>
                             <input class="dob" name="dob" type="date" placeholder="Enter your dob" >
                         </div>
@@ -163,6 +163,8 @@
         $("#submit-form").submit((e)=>{
             var x= $("#memnumevent").val()
             localStorage.setItem("num", x);
+            var name= $("#headfullname").val()
+            localStorage.setItem("fname",name);
             e.preventDefault()
             $.ajax({
                 url:"https://script.google.com/macros/s/AKfycbwmf3Y_VRFCQ6U9WlQ4_Dl05CoB3SDI1bxyhTzlpW_gfGGNqMYAYIb-fGNElxB8k-t_PA/exec",
